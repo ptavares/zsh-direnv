@@ -51,26 +51,26 @@ _zsh_direnv_download_install() {
         machine=386
         ;;
       *)
-        _zsh_direnv_log $BOLD "red" "Machine $(uname -m) not supported by this plugin"   
+        _zsh_direnv_log $BOLD "red" "Machine $(uname -m) not supported by this plugin"
         return 1
       ;;
     esac
     _zsh_direnv_log $NONE "blue" "  -> download and install direnv ${version}"
-    wget -qc https://github.com/direnv/direnv/releases/download/${version}/direnv.${OSTYPE%-*}-${machine} -O "${DIRENV_HOME}/direnv"
+    wget -qc --no-check-certificate  https://github.com/direnv/direnv/releases/download/${version}/direnv.${OSTYPE%-*}-${machine} -O "${DIRENV_HOME}/direnv"
     chmod +x "${DIRENV_HOME}/direnv"
     echo ${version} > ${ZSH_DIRENV_VERSION_FILE}
 }
 
 _zsh_direnv_install() {
   _zsh_direnv_log $NONE "blue" "#############################################"
-  _zsh_direnv_log $BOLD "blue" "Installing direnv..." 
-  _zsh_direnv_log $NONE "blue" "-> creating direnv home dir : ${DIRENV_HOME}"  
+  _zsh_direnv_log $BOLD "blue" "Installing direnv..."
+  _zsh_direnv_log $NONE "blue" "-> creating direnv home dir : ${DIRENV_HOME}"
   mkdir -p ${DIRENV_HOME} || _zsh_direnv_log $NONE "green" "dir already exist"
   local last_version=$(_zsh_direnv_last_version)
   _zsh_direnv_log $NONE "blue" "-> retrieve last version of direnv..."
   _zsh_direnv_download_install ${last_version}
   if [ $? -ne 0 ]
-  then 
+  then
     _zsh_direnv_log $BOLD "red" "Install KO"
   else
     _zsh_direnv_log $BOLD "green" "Install OK"
@@ -81,7 +81,7 @@ _zsh_direnv_install() {
 update_zsh_direnv() {
   _zsh_direnv_log $NONE "blue" "#############################################"
   _zsh_direnv_log $BOLD "blue" "Checking new version of direnv..."
-  
+
   local current_version=$(cat ${ZSH_DIRENV_VERSION_FILE})
   local last_version=$(_zsh_direnv_last_version)
 
@@ -89,7 +89,7 @@ update_zsh_direnv() {
   then
     _zsh_direnv_log $BOLD "green" "Already up to date, current version : ${current_version}"
   else
-    _zsh_direnv_log $NONE "blue" "-> Updating direnv..." 
+    _zsh_direnv_log $NONE "blue" "-> Updating direnv..."
     _zsh_direnv_download_install ${last_version}
     _zsh_direnv_log $BOLD "green" "Update OK"
   fi
