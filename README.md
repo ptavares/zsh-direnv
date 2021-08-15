@@ -6,9 +6,20 @@ zsh plugin for installing and loading [direnv](https://github.com/direnv/direnv.
 ## Table of content
 
 - [zsh-direnv](#zsh-direnv)
+  - [Supported Operating system](#supported-operating-system)
   - [Usage](#usage)
   - [Updating direnv](#updating-direnv)
   - [License](#license)
+
+## Supported Operating system
+
+List of Operating System currently supported by the plugin:
+
+- :penguin: Linux
+  - amd64
+  - arm64
+- :apple: Darwin
+  - arm64
 
 ## Usage
 
