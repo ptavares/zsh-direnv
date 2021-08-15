@@ -15,7 +15,7 @@ NONE="NONE"
 # PLUGIN MAIN
 #########################
 
-[[ -z "$DIRENV_HOME" ]] && export DIRENV_HOME="$HOME/.direnv/"
+[[ -z "$DIRENV_HOME" ]] && export DIRENV_HOME="$HOME/.direnv"
 
 ZSH_DIRENV_VERSION_FILE=${DIRENV_HOME}/version.txt
 
@@ -47,6 +47,11 @@ _zsh_direnv_download_install() {
       x86_64)
         machine=amd64
         ;;
+      arm64)
+        machine=arm64
+        # if on Darwin, trim $OSTYPE to match the direnv release
+        [[ "$OSTYPE" == "darwin"* ]] && local OSTYPE=darwin
+        ;;
       i686 | i386)
         machine=386
         ;;
@@ -56,7 +61,7 @@ _zsh_direnv_download_install() {
       ;;
     esac
     _zsh_direnv_log $NONE "blue" "  -> download and install direnv ${version}"
-    wget -qc --no-check-certificate  https://github.com/direnv/direnv/releases/download/${version}/direnv.${OSTYPE%-*}-${machine} -O "${DIRENV_HOME}/direnv"
+    curl -o "${DIRENV_HOME}/direnv" -fsSL https://github.com/direnv/direnv/releases/download/${version}/direnv.${OSTYPE%-*}-${machine}
     chmod +x "${DIRENV_HOME}/direnv"
     echo ${version} > ${ZSH_DIRENV_VERSION_FILE}
 }
