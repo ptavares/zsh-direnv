@@ -19,6 +19,7 @@ List of Operating System currently supported by the plugin:
   - amd64
   - arm64
 - :apple: Darwin
+  - amd64 
   - arm64
 
 ## Usage
