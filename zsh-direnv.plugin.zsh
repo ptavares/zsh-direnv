@@ -37,7 +37,7 @@ _zsh_direnv_log() {
 }
 
 _zsh_direnv_last_version() {
-  echo $(curl -s https://api.github.com/repos/direnv/direnv/releases | grep tag_name | head -n 1 | cut -d '"' -f 4)
+  echo $(curl -s https://api.github.com/repos/direnv/direnv/releases/latest | grep tag_name | cut -d '"' -f 4)
 }
 
 _zsh_direnv_download_install() {
