@@ -1,15 +1,25 @@
+[![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit&logoColor=white)](https://github.com/pre-commit/pre-commit)
+![Release](https://img.shields.io/badge/Release_version-0.0.0-blue)
+
 # zsh-direnv
 
 zsh plugin for installing and loading [direnv](https://github.com/direnv/direnv.git)
 >Inpired by [zsh-pyenv](https://github.com/mattberther/zsh-pyenv)
-
+>
 ## Table of content
 
+_This documentation section is generated automatically_
+
+<!--TOC-->
+
 - [zsh-direnv](#zsh-direnv)
+  - [Table of content](#table-of-content)
   - [Supported Operating system](#supported-operating-system)
   - [Usage](#usage)
   - [Updating direnv](#updating-direnv)
   - [License](#license)
+
+<!--TOC-->
 
 ## Supported Operating system
 
@@ -19,7 +29,7 @@ List of Operating System currently supported by the plugin:
   - amd64
   - arm64
 - :apple: Darwin
-  - amd64 
+  - amd64
   - arm64
 
 ## Usage

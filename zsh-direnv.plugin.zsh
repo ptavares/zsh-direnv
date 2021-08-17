@@ -28,7 +28,7 @@ _zsh_direnv_log() {
   local color=$2
   local msg=$3
 
-  if [ $font = $BOLD ]
+  if [ "$font" = $BOLD ]
   then
     echo $fg_bold[$color] "[zsh-direnv-plugin] $msg" $reset_color
   else
