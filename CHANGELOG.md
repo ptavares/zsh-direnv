@@ -1,5 +1,14 @@
 # Changelog
 
+<a name="0.1.1"></a>
+## 0.1.1 (2022-03-01)
+
+### Miscellaneous
+
+-  Merge pull request [#2](https://github.com/ptavares/zsh-direnv/issues/2) from apoxa/main [[f060d00](https://github.com/ptavares/zsh-direnv/commit/f060d0043303582319d43d7e8b6ffa22ddf357ba)]
+-  Fix darwin OSTYPE regardless of CPU arch. [[a7cbed8](https://github.com/ptavares/zsh-direnv/commit/a7cbed8bae562e47acbd9237f6b245dcc964ea9d)]
+
+
 <a name="0.1.0"></a>
 ## 0.1.0 (2021-08-17)
 
