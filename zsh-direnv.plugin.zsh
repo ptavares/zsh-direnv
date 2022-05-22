@@ -50,6 +50,9 @@ _zsh_direnv_download_install() {
       arm64)
         machine=arm64
         ;;
+      aarch64)
+        machine=arm64
+        ;;
       i686 | i386)
         machine=386
         ;;
