@@ -1,5 +1,17 @@
 # Changelog
 
+<a name="0.1.2"></a>
+## 0.1.2 (2022-05-23)
+
+### Fixed
+
+- 🐛 Add alias for aarch64 machine type [[ae63b36](https://github.com/ptavares/zsh-direnv/commit/ae63b36bd1585bb81d8956d323c8e5837caa1efe)]
+
+### Miscellaneous
+
+-  fix: Add alias for aarch64 machine type [[c8be53f](https://github.com/ptavares/zsh-direnv/commit/c8be53fdd42b3f5f22cc26b315e766759940d8f2)]
+
+
 <a name="0.1.1"></a>
 ## 0.1.1 (2022-03-01)
 
