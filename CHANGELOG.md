@@ -1,5 +1,13 @@
 # Changelog
 
+<a name="0.1.3"></a>
+## 0.1.3 (2022-07-17)
+
+### Fixed
+
+- 🐛 fix duplicate path addition [[3cde1b5](https://github.com/ptavares/zsh-direnv/commit/3cde1b5245ec3ab2216d04896dcb37cd8514af69)]
+
+
 <a name="0.1.2"></a>
 ## 0.1.2 (2022-05-23)
 
